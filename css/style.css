@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    height:100%;
+}
+.item {
+    float: left;
+    width: 700px;
+    height: 300px;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: white;
+}
+
+.thumbs {
+    float: left;
+    height: 300px;
+    width: 180px;
+    background: #000;
+    position: relative;
+}
+
+.thumb {
+    height: calc((300px) / 5);
+    opacity: 0.5;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb.active {
+    outline: 2px solid #ccc;
+    opacity: 1;
+}
+
+.prev, .next {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.next {
+    bottom: 0;
+}
+
+.prev::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.next::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: block;
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%) rotate(135deg);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.cont-all{
+    height: 100vh;
+    background: linear-gradient(#121212,#0a2744,#30475E);
+}
+
+.btn{
+    padding: 20px 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+.btn-play{
+    background-color: rgb(3, 106, 190);
+}
+.btn-pause{
+    background-color: yellow;
+
+}
+
+.btn-play:hover{
+    outline: 2px solid white;
+    background-color: rgb(1, 53, 95);
+}
+
+.btn-pause:hover{
+    outline: 2px solid white;
+    background-color: rgb(145, 145, 1);
+}
